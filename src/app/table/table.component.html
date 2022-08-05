@@ -1,0 +1,39 @@
+<div class="table">
+  <div class="head">
+    <div class="col"><!-- placeholder --></div>
+    <div class="col">Contractor Name</div>
+    <div class="col">Type</div>
+    <div class="col">Start date</div>
+    <div class="col">Amount</div>
+    <div class="col">Status</div>
+    <div class="col">Actions</div>
+  </div>
+
+  <div class="row" *ngFor="let tr of tableRows">
+    <div class="col">
+      <img class="avatar" src="/assets/img/{{tr.img}}" alt="{{tr.name}} avatar">
+    </div>
+    
+    <div class="col">{{tr.name}}</div>
+    <div class="col">{{tr.type}}</div>
+    <div class="col">{{tr.startDate}}</div>
+    <div class="col">{{tr.amount | currency}}</div>
+    
+    <div class="col">
+      <span class="status" [ngClass]="{active: tr.status === 'active'}">
+        {{tr.status | titlecase}}
+      </span>
+    </div>
+
+    <div class="col">
+      <a (click)="showMenu(tr.id)">
+        <img src="assets/icons/dots.svg" alt="actions for tr {{tr.name}}">
+      </a>
+
+      <app-actions-menu *ngIf="tr.showMenu"></app-actions-menu>
+
+      <div class="backdrop" *ngIf="tr.showMenu" (click)="hideMenu(tr.id)"></div>
+    </div>
+
+  </div>
+</div>

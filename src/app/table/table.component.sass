@@ -1,0 +1,140 @@
+.backdrop
+  position: fixed
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  z-index: 998
+
+.table
+  border-radius: 5px
+  margin-bottom: 90px
+  @media (min-width: 1201px)
+    padding: 12px
+    box-shadow: 0 5px 10px #0003
+    background: #fff
+  
+
+  .status
+    @media (min-width: 1201px)
+      color: #f29d42
+      background: #f29d4244
+      font-weight: 700
+      font-size: 14px
+      display: flex
+      align-items: center
+      padding: 0 10px
+      width: 100%
+      line-height: 24px
+      border-radius: 12px
+
+      &:before
+        border-radius: 100%
+        content: ''
+        display: block
+        width: 5px
+        height: 5px
+        background: #f29d42
+        margin-right: 7px
+
+      &.active
+        color: #36cf82
+        background: #36cf8244
+
+        &::before
+          background: #36cf82
+
+  .head, .row
+    display: flex
+    justify-content: space-between
+    min-width: 100%
+    @media (min-width: 1201px)
+      padding: 25px 0
+
+  .head
+    font-weight: 700
+    text-align: center
+    @media (max-width: 1200px)
+      display: none
+
+  .row
+    margin-bottom: 10px
+    border-radius: 5px
+    flex-wrap: wrap
+    @media (min-width: 1201px)
+      background: #f9f9f9
+    @media (max-width: 1200px)
+      background: #fff
+      margin-bottom: 20px
+      box-shadow: 0 5px 10px #0003
+      padding: 10px 15px
+
+    div:nth-of-type(2)
+      justify-content: flex-start
+
+  .col
+    width: 120px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: center
+    position: relative
+    @media (max-width: 1200px)
+      padding: 0 12px
+      min-width: 100%
+      justify-content: flex-start
+      line-height: 37px
+
+      &:nth-of-type(even)
+        background:  #f9f9f9
+
+    a
+      padding: 0 15px
+
+    .avatar
+      width: 41px
+      height: 41px
+      border-radius: 100%
+
+    &:before
+      @media (max-width: 1200px)
+        font-weight: 700
+        min-width: 50%
+
+    &:nth-of-type(1)
+      width: 41px
+      margin: 0 20px
+      @media (max-width: 1200px)
+        display: none
+
+    &:nth-of-type(2)
+      width: 220px
+      @media (max-width: 1200px)
+        &:before
+          content: 'Contractor name: '
+
+    @media (max-width: 1200px)
+      &:nth-of-type(3):before
+        content: 'Type: '
+
+    @media (max-width: 1200px)
+      &:nth-of-type(4):before
+        content: 'Start date: '
+
+    @media (max-width: 1200px)
+      &:nth-of-type(5):before
+        content: 'Amount: '
+        
+    &:nth-of-type(6)
+      width: 210px
+      @media (max-width: 1200px)
+        &:before
+          content: 'Status: '
+
+    &:nth-of-type(7)
+      // max-width: 37px
+      @media (max-width: 1200px)
+        display: none
+
+  
+    

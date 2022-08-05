@@ -1,0 +1,89 @@
+.row
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-bottom: 20px
+
+.search
+  height: 58px
+  background: #fff
+  border: solid 1px #f0f0f0
+  box-shadow: 0 5px 10px #0003
+  border-radius: 5px
+  position: relative
+  overflow: hidden
+  @media (min-width: 1201px)
+    width: calc(100% - 340px)
+  @media (max-width: 1200px)
+    min-width: 100%
+    margin-bottom: 15px
+
+  img
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    left: 8px
+  
+  input
+    width: calc(100% - 50px)
+    float: left
+    height: 100%
+    border: 0
+    padding-left: 50px
+
+    &:focus
+      outline: 0
+
+button
+  height: 58px
+  font-weight: 700
+  box-shadow: 0 5px 10px #0003
+  border: 0
+  border-radius: 5px
+  display: flex
+  align-items: center
+  padding: 0 22px
+  cursor: pointer
+  justify-content: center
+  width: 111px
+
+  &:active
+    opacity: 0.7
+  
+  img
+    margin-right: 8px
+
+  &.red
+    color: #fff
+    background: red
+    width: 192px
+
+.input
+  background: #fff
+  box-shadow: 0 5px 10px #0003
+  border-radius: 5px
+  font-size: 12px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 250px
+  height: 40px
+  padding: 0 10px
+  @media (max-width: 1200px)
+    margin: 0 auto 15px
+
+  &.date:before
+    background: url('/assets/icons/calendar-gray.svg')
+    content: ''
+    display: block
+    height: 15px
+    width: 14px
+
+  &.dropdown:after
+    background: url('/assets/icons/arrow-gray.svg')
+    content: ''
+    display: block
+    height: 6px
+    width: 10px
+  

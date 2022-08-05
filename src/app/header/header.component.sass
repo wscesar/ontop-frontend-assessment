@@ -1,0 +1,140 @@
+header
+  background-color: #fff
+  box-shadow: 0 5px 10px #0003
+  
+.logo
+  @media (max-width: 1200px)
+    width: 80px
+
+.mobile-menu
+  @media (min-width: 1201px)
+    display: none
+  
+.container
+  display: flex
+  align-items: center
+  justify-content: space-between
+  max-width: 1440px
+  margin: auto
+  @media (min-width: 1201px)
+    min-height: 108px
+    padding: 0 20px
+  @media (max-width: 1200px)
+    padding: 20px
+
+.avatar
+  @media (max-width: 1200px)
+    display: none
+  @media (min-width: 1201px)
+    display: flex
+    align-items: center
+    position: relative
+  
+    &:after,
+    &:before
+      content: ''
+      display: block
+
+    &:after
+      background: url('/assets/icons/arrow-gray.svg')
+      margin-left: 9px
+      width: 10px
+      height: 6px
+
+    &:before
+      position: absolute
+      width: 1px
+      height: 45px
+      background: #898989
+      left: -20px
+      top: 50%
+      transform: translateY(-50%)
+
+    img
+      width: 65px
+      height: 65px
+      border-radius: 100%
+
+nav
+  @media (max-width: 1200px)
+    display: none
+  @media (min-width: 1201px)
+    display: flex
+    justify-content: space-between
+    
+    a
+      align-items: center
+      color: #898989
+      display: flex
+      font-weight: 700
+      height: 108px
+      position: relative
+      text-decoration: none
+      margin-left: 75px
+      
+      &:first-of-type
+        margin-left: 0
+        
+      &:hover
+        color: #ff5a70
+        
+        .decorator
+          height: 10px
+
+        &:after
+          background: url('/assets/icons/arrow-red.svg')
+      
+      &:before
+        content: ''
+        display: inline-block
+        margin-right: 9px
+
+      &:after
+        background: url('/assets/icons/arrow-gray.svg')
+        content: ''
+        display: block
+        height: 6px
+        margin-left: 9px
+        width: 10px
+
+      .decorator
+        background: #ff5a70
+        bottom: 0
+        display: block
+        height: 0
+        left: 0
+        position: absolute
+        transition: 500ms
+        width: 100%
+        
+      &:nth-of-type(1)
+        &:hover:before
+          background: url('/assets/icons/user-red.svg')
+        &::before
+          background: url('/assets/icons/user-gray.svg')
+          width: 11px
+          height: 14px
+      
+      &:nth-of-type(2)
+        &:hover:before
+          background: url('/assets/icons/document-red.svg')
+        &::before
+          background: url('/assets/icons/document-gray.svg')
+          width: 11px
+          height: 14px
+      
+      &:nth-of-type(3)
+        &:hover:before
+          background: url('/assets/icons/payout-red.svg')
+        &::before
+          background: url('/assets/icons/payout-gray.svg')
+          width: 15px
+          height: 11px
+      
+      &:nth-of-type(4)
+        &:hover:before
+          background: url('/assets/icons/calendar-red.svg')
+        &::before
+          background: url('/assets/icons/calendar-gray.svg')
+          width: 14px
+          height: 15px
